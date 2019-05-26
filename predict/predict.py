@@ -33,7 +33,7 @@ log.addHandler(ch)
 log.info('D2V')
 # Loading doc2vec model
 
-model = Doc2Vec.load('./predict/imdb.d2v')
+model = Doc2Vec.load('./imdb.d2v')
 # input sentence
 inputS = "I love  she is very beautiful  and smiley "
 # tokeniation of the input sentence
@@ -48,7 +48,7 @@ print(sims[0])
 
 
 
-with open('z') as f:
+with open('./input-predict.txt') as f:
     for line in f:
         tokens = line.split()
         new_vector = model.infer_vector(tokens)
